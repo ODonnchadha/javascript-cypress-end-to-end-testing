@@ -31,4 +31,4 @@
         npx cypress open
     ```
     - NOTE: Class instruction is on Chrome 77. Cypress version is 3.5.0. I am currently on Chrome 86 with Cypress version 5.6.0.
-    - FIrst test.
+    - Cypress has Mocha baked in. And Cypress automatically waits about four seconds before it determines that something is wrong.
