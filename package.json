@@ -1,0 +1,23 @@
+{
+  "name": "javascript-cypress-end-to-end-testing",
+  "version": "1.0.0",
+  "description": "Culled from a Linked-In learning class entitled \"End-to-End JavaScript Testing with Cypress.io.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ODonnchadha/javascript-cypress-end-to-end-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ODonnchadha/javascript-cypress-end-to-end-testing/issues"
+  },
+  "homepage": "https://github.com/ODonnchadha/javascript-cypress-end-to-end-testing#readme",
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  }
+}
