@@ -42,3 +42,20 @@
 
     - Cypress recommends "special data attributes" on the elements that we want to test. e.g.: <span data-cy="chars-left-count">
     - You can assign any unique value to this.
+
+    - Aliasing elements. And Cypress commands ae async, yet they are not promises.
+    - And other manner in which to alias elements.
+    - You can set the root Url:
+    ```javascript
+        {
+            "baseUrl": "http://localhost:3000"
+        }
+    ```
+    - Obtain the DOM element with a function. Note: This is not a Promise.
+    ```javascript
+        cy.get('@charsLeftSpan').then($charsLeftSpan => {
+            expect($charsLeftSpan.text()).to.equal('15');
+        });
+    ```
+
+- Intermediate Concepts:
