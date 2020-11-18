@@ -16,8 +16,6 @@ describe('example-3', () => {
     });
 
     it('Input shoud return remaining text of a given length', () => {
-        // $charsLeftSpan: This is the DOM element that Cypress returned to us.
-        // Note: This is not a promise.
         cy.get('@charsLeftSpan').then($charsLeftSpan => {
             expect($charsLeftSpan.text()).to.equal('15');
         });
