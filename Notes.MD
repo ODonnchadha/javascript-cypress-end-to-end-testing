@@ -32,3 +32,13 @@
     ```
     - NOTE: Class instruction is on Chrome 77 with Cypress version 3.5.0. I am currently on Chrome 86 with Cypress version 5.6.0.
     - Cypress has Mocha baked in. And Cypress automatically waits about four seconds before it determines that something is wrong.
+
+    - Best manerism in which to select a given element? 
+    - Stay away from selecting the HTML tag. e.g.: Two spans. Two inputs. Error: "Your subject contained two elements."
+    - We actually combine the, say, inner text of a span into one string.
+    - We can use indexes. e.g.: cy.get('span').eq('1'). This is the Index of the element. It looks to be 1-based.
+    - CSS class? This can be a little better. e.g.: cy.get('button.big-green');
+    - Id or name attribute? Selecting elements by the text they contain? e.g.: cy.contains('Submit');
+
+    - Cypress recommends "special data attributes" on the elements that we want to test. e.g.: <span data-cy="chars-left-count">
+    - You can assign any unique value to this.
