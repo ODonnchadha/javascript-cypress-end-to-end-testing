@@ -21,7 +21,7 @@
         - Data mining or web crawling.
         - It runs inside a real browser. It only support JavaScript.
         - You cannot test multiple tabs or browser windows. The feeling is that there is no good reason. Do not test browser functionality.
-        - A chat application needds to be 'stubbed.'
+        - A chat application needs to be 'stubbed.'
         - Cannot visit two different super domains within the *same* test. e.g.: An OAUTH provider.
 
 - The Basics:
