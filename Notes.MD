@@ -132,4 +132,50 @@
                     - NOTE: How many times the function is called, and with which arguments.
 
 - Other Useful Commands:
+    - The 'wrap' command: Using Chai:
+        ```javascript
+            cy.get('h1').then($element => {
+                expect($element) ...
+            });
+        ```
+        - The *new* way: Use this for Cypress.io syntax consistency:
+        ```javascript
+            cy.get('h1').then($element => {
+                cy.wrap($element).should(...)
+            });
+        ```
+    - The 'and' command:
+        ```javascript
+            cy.get('h1').should().should()
+        ```
+        - User more so for readibility with multiple assertions:
+        ```javascript
+            cy.get('h1').should().and()
+        ```
+    - 'Filter' and 'not:' Commands that are oposite of each other.
+        - e.g: <div id="container"><h1 /><p /><h3 /><p /></div>
+        ```javascript
+            cy.get('#container').filter('p');
+            cy.get('#container').not('p');
+        ```
+        - NOTE: Cypress provides a wrapper for many of the jQuery commands. Most of these cammoand are avalable.
+    - Special characters: [Enter], [Tab], [Esc]
+        ```javascript
+            cy.get('input').type('This is a test {enter}');
+        ```
+    - Use the code completion tool: VS Code example:
+        - Quickest manner in which to get code completion: For a 'per file' basis:
+        ```javascript
+            /// <reference types="Cypress" />
+        ```
+        - Add a new file to the project entitled jsconfig.json at the root and add:
+        ```javascript
+            {
+                "include": [
+                    "./node_modules/cypress",
+                    "cypress/**/*.js"
+                ]
+            }
+        ```
 
+- Summary: Course was meant to be an introduction. So don't get cocky.
